@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com estilos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Você se lembra do que falamos sobre o CSS?</h1>
+    <p>Nós já falamos sobre folhas de estilo em cascata, as famosas CSS no <strong>capitulo 3</strong>. Se por acaso
+        você não se lembra
+        direito, vale a pena voltar lá e dar uma segunda olhada nas definições. Vou considerar que você se lembra
+        claramente o que são as <strong>Cascading Style Sheets</strong> para podermos prosseguir.</p>
+    <p>Outro conteúdo muito importante que vimos está no <strong>capítulo 8</strong>, onde falamos sobre
+        a íntima relação da HTML5 com a <strong>semântica</strong> das tags. Lá foi comentado que todo e
+        qualquer efeito visual é responsabilidade das CSS. Vou partir daí e vamos trabalhar
+        com os estilos, ok?</p>
+    <p> Caso você sinta qualquer dúvida a partir daqui, não se esqueça de revisitar os capítulos anteriores, pois a base
+        foi dada gravativamente até esse momento. Vamos lá!</p>
+
+    <h1>A forma mais simples de aplicar estilos: CSS inline style</h1>
+    <p>Vamos começar pela técnica mais básica para aplicar estilos em áreas pontuais em nosso site, que é usando as CSS
+        dentro de parâmetros de HTML5. Crie mais uma pasta da sua área de <strong>exercicíos</strong> e crie um arquivo
+        <em>index.html</em> com
+        aquele código base que já fizemos várias vezes. Dentro da área <em>&lt;body&gt;</em>, crie um código como apresentado a
+        seguir:
+    </p>
+    <pre>
+        <code>
+            &lt;body&gt;
+                &lt;h1&gt;Capítulo 1&lt;/h1&gt;
+                &lt;h2&gt;Capítulo 1.1&lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ullam iusto est hic natus sequi temporibus molestias perferendis nobis nostrum, non officia reiciendis, odit doloremque? Omnis natus impedit eveniet doloremque?&lt;/p&gt;
+                &lt;h2&gt;Capítulo 1.2&lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quod perferendis corrupti hic quia? Dolor animi magni harum eos sunt eveniet aliquam nisi beatae dolorem corrupti, accusantium velit aliquid repellendus.&lt;/p&gt;
+                &lt;h1&gt;Capítulo 2&lt;/h1&gt;
+                &lt;h2&gt;Capítulo 2.1&lt;/h2&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias aliquam ea consequatur, aperiam provident architecto facilis illum officia maiores quia 
+                excepturi rem obcaecati necessitatibus blanditiis commodi repudiandae ducimus assumenda sunt.&lt;/p&gt;
+            &lt;/body&gt;
+        </code>
+    </pre>
+    <p>Agora abra o arquivo recém criado no Google Chrome. O resultado visual deve ser semelhante ao apresentado a
+        seguir:</p>
+    <p>Vamos começar nos focando na tag <em>&lt;body&gt;</em> e aplicando um estilo diferente ao corpo da página. Adicione o
+        parâmetro
+        <em>style</em> e digite as duas declarações de <em>font-family</em> e <em>color</em>, conforme apresentado a
+        seguir:
+    </p>
+    <pre>
+        <code>
+            &lt;body style="font-family: Arial, Helvetica, sans-serif;" color="blue"&gt;
+        </code>
+    </pre>
+    <p>Muito cuidado na hora de digitar esse código. Tudo deve ser seguido como fizemos acima, inclusive com letras
+        maiúsculas e minúsculas. Não se esqueça de adicionar os pontos e vírgulas para separar as declarações. Seu
+        resultado visual deve ser esse: <a href="resultado.html" target="_self">Resultado esperado.</a></p>
+    <p>Note que o formato da letra mudou (era Times e ficou em Arial) e a cor da fonte também foi alterado para azul. se
+        por acaso alguma dessas duas alterações não funcionou corretamente com você, confira seu código pois algo foi
+        digitado incorretamente. Lembre-se que o computador não é tão inteligente quanto você pode pensar. Temos que dar
+        ordens bem claras e seguindo sempre as regras para que ele nos obedeça.</p>
+    <p>Vamos fazer mais uma alteração, dessa vez na linha do primeiro tíulo <em>&lt;h1&gt;</em> do nosso código:</p>
+    <pre>
+        <code>
+            &lt;h1 style="color:red"&gt;Capítulo 1&lt;/h1&gt;
+        </code>
+    </pre>
+    <h1>Capítulo 1</h1>
+    <p>Note que apenas o Capítulo 1 ficou vermelho, o Capítulo 2 - que também é um <em>&lt;h1&gt;</em> - não teve alteração
+        alguma. Isso
+        acontece pois estamos fazendo configurações pontuais usando o CSS.</p>
+    <h1>Estilizando de maneira mais interessante: CSS internal style</h1>
+    <p>Para aplicar estilos de forma mais dinâmica e prática, podemos adicionar uma tag <em>&lt;style&gt;</em> dentro da área
+        <em>&lt;head&gt;</em> do nosso documento HTML local. Volte lá
+        no seu VSCode, e adicione o código dentro de <em>&lt;head&gt;</em>.</p>
+    <pre>
+        <code>
+            &lt;style&gt;
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    background-color: lightcyan;
+                    color: blue;
+                }
+                h1 {
+                    color: green;
+                }
+            &lt;/style&gt;
+        </code>
+    </pre>
+    <p>Feitas as alterações, vamos ver o resultado e uma dúvida vai surgir:</p>
+    <p>Você sabe explicar por que o Capitulo 1 ficou vermelho e não verde, como solicitamos?</p>
+    <p>Isso acontece porque as configurações pontuais (HTML syle) vão prevalecer sobre as configurações gerais (CSS
+        style). Volte ao seu código e remova todas as configurações de estilo que fizemos nas tags <em>&lt;body&gt;</em> e
+        <em>&lt;h1&gt;</em> no ínicio
+        do capítulo.</p>
+    <h1>A técnica mais versatil: CSS external style</h1>
+    <p>Manter as folhas de estilo fora do código HTML, além de uma maior organização faz com que tudo seja reaproveitado
+        de maneira mais eficiente nas outras páginas do nosso site. Para isso, utilizamos a tag <em>&lt;link&gt;</em>
+        especialmente
+        configurada para trabalhar com arquivos externos de estilo. Essa tag deve ser colocada dentro da área
+        <em>&lt;head&gt;</em> do
+        seu documento HTMl.</p>
+    <pre>
+        <code>
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        </code>
+    </pre>
+    <p>A linha pode estar em qualquer linha, contanto que seja dentro área <em>&lt;head&gt;</em>. Particularmente, sempre procuro
+        adicionar essa configuração após a tag <em>&lt;title&gt;</em> do documento atual.</p>
+    <h2>Dica para criar CSS externo com VSCode</h2>
+    <p>O Visual Studio Code sempre trás algumas facilidades para o nosso dia-a-dia. Vá até o final da linha
+        <em>&lt;title&gt;</em> e
+        pressione Enter para criar uma nova linha. Depois comece digitando a palavra <em>&lt;link&gt;</em>, sem as marcas da tag
+        (veja o
+        exemplo abaixo).</p>
+    <pre>
+        <code>
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        </code>
+    </pre>
+    <br>
+    <p>No menu de contexto que vai aparecer, escolha a opção <em>link:css</em> e a linha apresentada abaixo será
+        magicamente
+        preenchida.</p>
+    <pre>
+        <code>
+            &lt;title&gt;CSS external&lt;/title&gt;
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        </code>
+    </pre>
+    <p>Agora passe o mouse sobre o nome do arquivo <em>style:css</em> e veja que exise um atalho <em>"Siga o link"</em>,
+        bastando
+        pressionar <em>Ctrl+clique</em> (ou <em>Cmd+clique</em>, se estiver usando o sistema MacOs). A primeira vez que
+        você segurar o
+        <em>Ctrl/Cdm</em> e clicar sobre o link, o VSCode vai perguntar se você quer que ele crie o arquivo para você.
+        Clique em
+        <em>Sim</em> ou <em>Ok</em> para aceitar a ajuda e seu arquivo será criado automaticamente.
+    </p>
+    <p>Agora é só adicionar os seletores e todas as suas respectivas declarações nesse arquivo separado para que elas
+        possam ser aplicadas ao documento que contiver um <em>&lt;link&gt;</em> para ele.</p>
+    <pre>
+        <code>
+                @charset "UTF-8";
+                /* Regra @charset caso haja problemas com acentuação */
+
+                body {
+                    background-color: lightgoldenrodyellow;
+                    color: chocolate;
+                    font-size: 12pt;
+                    font-family: Arial;
+                }
+                h1 {
+                    color: brown;
+                }
+                a {
+                    color: brown;
+                    text-decoration:  none;
+                }
+        </code>
+    </pre>
+    <p>Na <strong>linha 1</strong>, colocamos uma <strong>regra</strong> em CSS, que vai indicar a compatibilidade de
+        codificação com o padrão UTF-8,
+        assim como fizemos com o arquivo HTML5. Essa linha não é obrigatória e normalmente nem vai aparecer na marioria
+        dos seus arquivos de estilo, mas caso você comece a ter problemas de compatibilidade com alguns caracteres,
+        saiba que ela existe.</p>
+    <p>Na <strong>linha 2</strong>, adicionamos um <strong>comentário</strong> para facilitar a documentação do arquivo.
+        Os comentários - assim como vimos
+        no HTML - só servirão de explicação para que o desenvolvedor entenda o funcionamento de uma determinada linha ou
+        trecho de código. O navegador não vai considerar nada que está entre os símbolos /* e */ em CSS.</p>
+    <p>Nas demais linhas, fizemos as configurações dos seletores, da mesma maneira que criamos com as outras duas
+        técnicas apresentadas no capítulo.</p>
+    <h1>Qual técnica eu escolho pra usar?</h1>
+    <p>Nesse capítulo, aprendemos as três técnicas de uso da folha de estilo em cascata: <strong>inline</strong>,
+        <strong>interna</strong> e <strong>externa</strong>. Mas
+        em que situações devemos escolher cada um dos formatos?</p>
+    <p>Para falar com toda a sinceridade, a técnica <strong>CSS inline style</strong> deve ser evitada ao máximo. Ela
+        acaba deixando seu
+        código meio confuso, misturando a parte HTML e CSS em uma mesma linha. Mas se é para citar um momento específico
+        em que podemos aplicar estilos inline em nossos códigos, use apenas em configurações pontuais e que não serão
+        mais usadas em nenhum outro momento.</p>
+    <p>Já a técnica <strong>CSS internal style</strong> organiza melhor seu código, separando conteúdo e estilo em duas
+        áreas bem
+        definidas do seu documento. Use essa técnica quando for criar páginas isoladas com estilos próprios, que não
+        serão replicados em outras páginas. Opte também por essa técnica apenas se a quantidade de configuração de
+        estilo for pequena/média. Usar muitos seletores com muita declarações vai fazer com que seu arquivo
+        <em>.html</em> fique
+        muito grande e seu conteúdo seja visualmente jogado lá pra baixo, dificultando manutenções futuras.</p>
+    <p>Por fim, opte sempre pela técnica <strong>CSS external style</strong> sempre que seu estilo for usado em várias
+        páginas dentro do
+        seu site. Usando a tag <em>&lt;link&gt;</em> em várias páginas, você pode compartilhar o mesmo estilo entre elas
+        e não vai
+        precisar ficar alterando vários arquivos quando o seu cliente solicitar uma pequena mudança no tom de uma
+        determinada cor por exemplo.</p>
+    <p>De forma resumida, guarde usso na sua cabeça:</p>
+    <ul type="disc">
+        <li>CSS externo= use sempre que puder</li>
+        <li>CSS interno= use para pequenas configurações</li>
+        <li>CSS inline= procure evitar</li>
+    </ul>
+    <p>Ainda é possível misturar as três técnicas, criando um CSS externo para as configurações globais, CSS interno
+        para as configurações locais de um documento e CSS inline para pequenas configurações pontuais.</p>
+    <br>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlink</title>
+    <style>
+        body {
+            background-image: linear-gradient(to top, #0DF205, #09A603, #067302, #034001, #022601);
+            color: rgb(255, 255, 255);
+            font-size: medium;
+            font-family: Arial, sans-serif;
+        }
+        a{
+            color: rgb(255, 85, 85);
+        }
+        strong {
+            color: rgb(64, 64, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hyperlink</h1>
+    <h2>Joga a âncora, marujo!</h2>
+    <p>Os <em>hyperliks</em> são um dos conceitos mais antigo da história da Linguagem HTML. Eles permitem que você
+        liguem um ponto ao outro na <em>World Wide Web.</em> Toda vez que você está acessando um ste e clica em um
+        local para ir para outra página, outro site ou até para baixar um arquivo, você está interagindo com um
+        <em>hyperlink.</em>
+    </p>
+    <p>Até mesmo os mecanismos de buscas se utilizam dos hyperlinks de um site. O <strong>Google</strong>, por exemplo,
+        para achar um determinado site, fica vasculhando constantemente todos os outros sites da Internet procurando por
+        links para descobrir novos conteúdos. Por isso é tão importante conseguir links válidos de outros sites para
+        nosso próprio site.</p>
+    <p>Para criar hyperliks, devemos criar <strong>âncoras</strong> através da tag &lt;a&gt;. O principal atributo dessa
+        <em>tag</em> é o <em>href</em>, que cria uma referência hipertexto. Vamos ver um exemplo simples:
+    </p>
+    <pre>
+        <code>
+            &lt;h1&gt; Vamos cirar um link &lt;/ h1&gt;
+            &lt;a href="https://gustavoguanabara.github.io"&gt; 1- Acesse meu perfil GitHub&lt;/ a&gt;
+        </code>
+    </pre>
+    <p><a href="https://gustavoguanabara.github.io">1- Acesse meu perfil no GitHub</a></p>
+    <p>Note que dentro do atributo <em>href</em>, o que colocamos foi uma <strong>URL</strong> completa para outro
+        site. </p>
+    <hr>
+    <p>Outro atributo bem útil da tag de âncora é o <em>hreflang</em>, que permite indicar qual é o
+        idioma principal do site para onde o link está desviando o fluxo de navegação. Isso vai
+        permitir avisar ao navegador e a softwares de tradução como lidar caso o visitante
+        opte por traduzir automaticamente os conteúdos.
+    </p>
+    <pre>
+                <code>
+                    &lt;a href="<ins>http://www.w3schools.com/html/</ins>" hreflag="<ins>en</ins>"> 
+                    Site da W3Schools (em Inglês)
+                    &lt;a&gt;
+                </code>
+            </pre>
+    <p><a href="http://www.w3schools.com/html/" hreflang="en">Site da W3Schools</a></p>
+    <hr>
+    <h2>Mira no alvo</h2>
+    <p>Por padrão, sempre que um visitante clique em um <em>hyperlink</em>, o site de destino abre na mesma janela do
+        site que continha esse link. Ou seja, o conteúdo anterior vai deixar de ser exibido para mostrar o novo
+        conteúdo.</p>
+    <p>Esse é um comportamento desejado quando o visitante vai continuar a visitar o nosso site e provavelmente ele
+        nunca mais voltará ao nosso?</p>
+    <p>Para poder controlar onde o site de destino vai abrir, podemos usar o atributo <em>target</em>, que suporta os
+        seguintes valores:</p>
+    <ul>
+        <li><em>_blanck</em> vai abrir o link em uma nova janela em branco.</li>
+        <li><em>_self</em> vai abrir o link na janela ou frame atual (padrão).</li>
+        <li><em>_top</em> vai desfazer todos os frames e abrir o destino no navegador completo.</li>
+        <li><em>_parent</em> similar ao uso do <em>_top</em> em uma referência á janela mãe.</li>
+        <li><em>_nome-do-frame</em> caso estela usando frames, indicar o nome da janela a abrir.</li>
+    </ul>
+    <hr>
+    <p>Como o uso do frames é uma técnica quase em desuso, vamos nos basear apenas nas duas primeiras opções
+        <em>_blank</em> e <em>_self.</em>
+    </p>
+    <pre>
+                <code> 
+                   1-  &lt;a href=<ins>"pagina2.html"</ins> target="_self"&gt;
+                    Continuar navegando no site 
+                    &lt;/a&gt;
+                </code>
+            </pre>
+
+    <pre>
+                <code> 
+                    2- &lt;a href=<ins>"http://gustavoguanabara.github.com"</ins> target="_blank"&gt;
+                    Abrir perfil em uma nova janela
+                    &lt;/a&gt;
+                </code>
+            </pre>
+
+    <p><a href="pagina2.html">1- Continuar navegando no site</a></p>
+    <p><a href="http://gustavoguanabara.github.io" target="_blank"> 2- Continuar navegando no site</a></p>
+
+
+
+    <hr>
+    <h2>Esse link é seu ou dos outros?</h2>
+    <p>existe um recurso bem interessante para links que é indicar qual é a natureza do destino usando valores, entre
+        eles eu vou citar:</p>
+    <ul>
+        <li><em>next</em> indica que o link é para próxima parte do documento atual.</li>
+        <li><em>prev</em> indica que o link é para a parte anterior do documento atual.</li>
+        <li><em>author</em> indica que é um link para o site do autor do artigo atual.</li>
+        <li><em>external</em> indica que é um link para outro site que não faz parte do site atual.</li>
+        <li><em>nofollow</em> indica que é um link para um site não endossado, como um link pago.</li>
+    </ul>
+    <pre>
+                <code>
+                    &lt;a href=<ins>"pagina2.html"</ins> target="_self" rel="next"&gt;
+                    1- Continuar navegando no site 
+                    &lt;/a&gt;
+                </code>
+            </pre>
+
+    <pre>
+            <code>
+                &lt;a href=<ins>"http://gustavoguanabara.github.com"</ins> target="_blank" rel+"external"&gt;
+                    2- Abrir perfil GitHub em nova janela  
+                    &lt;/a&gt;
+            </code>
+        </pre>
+    <p><a href="pagina2.html" target="_self" rel="next">1- Continuar navegando no site</a></p>
+    <p><a href="http://gustavoguanabara.github.io" target="_blank" referrerpolicy="external">2- Abrir perfil GitHub em
+            nova janela</a></p>
+    <p>No código anterior, o primeiro link é o que chamamos de <strong>link local</strong> ou <strong>link
+            interno,</strong> já que ele leva o visitante a outra página dentro do nosso próprio site. Note que não é
+        necessário nem indicar a URL completa nesses casos.</p>
+    <p>Já o segundo link vai nos levar para um outro site, o que chamamos de <strong>link externo.</strong> Nesses
+        casos, devemos indicar a URL completa, incluindo o protocolo <em>http://</em> ou <em>https://</em> e o caminho
+        que leve á uma página específica, se for necessário.</p>
+    <hr>
+    <h2>E para fazer Downloads?</h2>
+    <p>Outra coisa que aparece bastante em sites são os links para efetuar download de algum material em PDF, ou de
+        arquivo ZIP qualquer. A partir da versão HTML5, as âncoras receberam atributos especiais para isso. Basta fazer
+        o link diretamente para o arquivo que se deseja efetuar o download e adicionar o atributo <em>download</em> com
+        o valor configurado para o nome do arquivo a ser baixado e o atributo <em>type</em> para indicar ao navegador
+        que tipo de arquivo está sendo baixado. Vamos ver um exemplo:</p>
+        <pre>
+            <code>
+                &lt;a href="<ins>arquivos/meulivro.pdf" download="meulivro.pdf" type="application/pdf"</ins>&gt;
+                    Baixe aqui o PDF do meu livro
+                &lt;/a&gt;
+            </code>
+        </pre>
+
+        <a href="arquivos/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixe aqui o PDF do meu livro</a><hr>
+
+    <p>Aqui vão alguns<em> media types</em> bem usados nos nosso dia-a-dia:</p>
+    <ul>
+        <li><em>aplication/zip</em></li>
+        <li><em>video/mp4</em></li>
+        <li><em>audio/mpeg</em></li>
+        <li><em>text/html</em></li>
+        <li><em>video/H264</em></li>
+        <li><em>font/ttf</em></li>
+        <li><em>text/css</em></li>
+        <li><em>video/JPEG</em></li>
+        <li><em>image/jpeg</em></li>
+        <li><em>text/javascript</em></li>
+        <li><em>audio/aac</em></li>
+        <li><em>image/png</em></li>
+    </ul>
+    <hr>
+</body>
+
+</html>

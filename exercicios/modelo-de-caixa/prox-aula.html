@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
+            margin: 0px;
+        }
+        header {
+            background-color: lightcyan;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav {
+            background-color: blueviolet;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        nav > a {
+            text-decoration: none;
+            color: aqua;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+            color: chartreuse;
+            box-shadow: 1px 1px 1px black;
+            
+            
+        }
+
+        main {
+            background-color: lightgreen;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            
+        }
+        article {
+            background-color: darkblue;
+            padding: 5px 10px;
+            border-radius: 10px ;
+        }
+        article > aside {
+            background-color: brown;
+        }
+        footer {
+            background-color: black;
+            color: crimson;
+            text-align: center;
+            padding: 10px;
+            margin: 0px;
+        }
+        footer >  p {
+            margin: 0px;
+        }
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: bisque;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#" target="_blank">Links</a>
+            <a href="#" target="_blank">Links</a>
+            <a href="#" target="_blank">Links</a>
+            <a href="#" target="_blank">Links</a>
+            <a href="#" target="_blank">Links</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assunto">
+    
+        </section>
+        <section id="noticias">
+            <article>
+                <h1>Notícias sobre o Brasil</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi aliquid unde odit natus soluta perspiciatis aliquam eos molestias. Nemo at eveniet distinctio quod provident sint obcaecati explicabo, quos fugiat earum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, eaque consectetur natus sequi nulla consequatur, iusto a quam laboriosam, ratione reiciendis ducimus maxime deserunt hic assumenda incidunt? Dolores, ea. Ullam!</p>
+                <aside>
+                    <p>Artigo escrito por tal pessoa</p>
+                </aside>
+            </article>
+            <article>
+                <h1>Esportes para o lazer</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur repellat, cupiditate ducimus accusamus voluptatibus magnam, nostrum quasi fugiat harum quidem sunt, et modi minima obcaecati tempore deleniti consectetur. Praesentium, facilis?</p>
+            </article>
+        </section>
+    </main>
+    <footer>Desenvolvido por tal pessoa.</footer>
+</body>
+</html>

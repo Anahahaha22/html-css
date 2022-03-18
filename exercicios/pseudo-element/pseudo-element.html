@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+            
+            
+        }
+
+        /*a:visited {
+            color: rgb(255, 60, 0);
+        }*/
+
+        a:hover {
+            display: block;
+            background-color: rgb(214, 231, 250);
+            width: 200px;
+        }
+
+        .you:hover {
+            color: red;
+        }
+        .twi:hover {
+            color: blueviolet;
+        }
+        .ani:hover {
+            color: rgb(218, 6, 46);
+        }
+        
+        .you:active {
+            color: aqua;
+        }
+        .twi:active {
+            color: aqua;
+        }
+        .ani:active {
+            color: aqua;
+        }
+
+        .you::before {
+            content: '⇨ ';
+        }
+
+        .twi::before {
+            content: '⇨ ';
+        }
+
+        .ani::before {
+            content: '⇨ ';
+        }
+
+
+        .you::after {
+            content: ' ⇦';
+        }
+
+        .twi::after {
+            content: ' ⇦';
+        }
+
+        .ani::after {
+            content: ' ⇦';
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/" class="you" target="_blank">YouTube</a></li>
+        <li><a href="https://www.twitch.tv/" class="twi" target="_blank">Twitch</a></li>
+        <li><a href="https://www.anitube.site/" class="ani" target="_blank">Anitube</a></li>
+    </ul>
+</body>
+</html>
+

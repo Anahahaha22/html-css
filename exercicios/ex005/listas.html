@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="wmp.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: rgb(182, 155, 255);
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>Listas em HTML5</title>
+</head>
+<!--A tag ol tem o parametro: 1 A a I i -->
+<!--A tag ul tem p parametro: Disc Circle Square-->
+
+<body>
+    <h1>Listas em HTML5</h1>
+    <h2>Listas Ordenadas (Ordered List)</h2>
+    <p>Exemplos de <strong><em>Ordered list</em></strong> são como receitas de bolos, listas de aprovados dos vestibular
+        e
+        lista de carros mais
+        caros vendidos do mundo.</p>
+    <p>Para criar uma lista no HTML usamos a tag &lt;ol&gt; para demilitar a lista e &lt;li&gt; (<em>list item</em>)
+        para
+        identificar cada item da lista.</p><br>
+
+    <pre>
+        <code>
+             &lt;ol&gt;
+                 &lt;li&gt; Item 1 &lt;/li&gt;
+                 &lt;li&gt; Item 2 &lt;/li&gt;
+                 &lt;li&gt; Item 3 &lt;/li&gt;
+                 &lt;li&gt; Item 4 &lt;/li&gt;
+                 &lt;li&gt; Item 5 &lt;/li&gt;
+             &lt;/ol&gt;
+        </code>
+    </pre>
+    <hr>
+
+    <p>A Tag &lt;ol&gt; possui o parâmetro <em>type</em>, onde configuramos o tipo de marcador da lista atual. As opções
+        de valores para esse parâmetro são:</p>
+    <ul type="square">
+        <li>1- Valor padrão. Cria listas numeradas. Ex: 1, 2, 3, 4, ...</li>
+        <li>2- Cria listas alfabéticas em maiúsculas. Ex: A, B, C, D, ...</li>
+        <li>3- Cria listas alfabéticas em minuscúlas. Ex: a, b, c, d, ... </li>
+        <li>4- Cria listas com algarismos romanos em maiúsculas. Ex: I, II, III, IV, ...</li>
+        <li>5- Cria listas com algarismos romanos em minuscúlas. Ex: i, ii, iii, iv, ...</li>
+    </ul>
+    </p>
+    <br>
+    <p>Você também pode indicar o ínicio da contagem usando o parametro <em>start</em>.</p>
+    <p>Por exemplo a tag &lt;ol <em>Type="I" start="5"</em>&gt; vai gerar itens numerados como V, VI, VII, VIII,IX ...
+    </p>
+    <hr>
+    <h2>Listas não Ordenadas (Unordered Lists)</h2>
+    <p>Para criar uma <strong><em>unordered list</em></strong>, vamos precisar usar a tag &lt;ul&gt; para deliminar a
+        lista e tag &lt;li&gt; para criar um dos seus itens internos. Ex:</p>
+    <pre>
+        <code>
+             &lt;ul&gt;
+                 &lt;li&gt; Item 1 &lt;/li&gt;
+                 &lt;li&gt; Item 2 &lt;/li&gt;
+                 &lt;li&gt; Item 3 &lt;/li&gt;
+                 &lt;li&gt; Item 4 &lt;/li&gt;
+                 &lt;li&gt; Item 5 &lt;/li&gt;
+             &lt;/ul&gt;
+        </code>
+    </pre>
+
+    <p>O marcador padrão é a bolinha preta totalmente preenchido (Circle), mas existe a opção de configurar a
+        propriedade <em>type</em> da tag &lt;ul&gt; com os seguintes valores:</p>
+    <p>
+        <li type="disc"><em>Disc</em> - Padrão. Uma bola preta totalmente pintada.</li>
+        <li type="disc"><em>Circle</em> - Uma bola com uma borda preta e sem preenchimento.</li>
+        <li type="disc"><em>Square</em> - Um pequeno quadrado preto totalmente pintado</li>
+        <hr>
+    <h2>Misturando as coisas</h2>
+    <pre>
+            <code>
+                 &lt;ol&gt;
+                     &lt;li&gt; Item 1 &lt;/li&gt;
+                     &lt;li&gt; Item 2 &lt;/li&gt;
+                        &lt;ol&gt;
+                            &lt;li&gt; Item 2.1 &lt;/li&gt;
+                            &lt;li&gt; Item 2.2 &lt;/li&gt;
+                            &lt;li&gt; Item 2.3 &lt;/li&gt;
+                        &lt;/ol&gt;
+                     &lt;li&gt; Item 3 &lt;/li&gt;
+                     &lt;li&gt; Item 4 &lt;/li&gt;
+                     &lt;li&gt; Item 5 &lt;/li&gt;
+                 &lt;/ol&gt;
+            </code>
+        </pre>
+    <hr>
+    <p>Podemos também criar listas mistas, configurando listas dentro de outras listas. Veja o exemplo a seguir:
+
+    <ol>
+        <li>Item 1 </li>
+        <li>Item 2 </li>
+        <ol type="a">
+            <li>Item 2.1 </li>
+            <li>Item 2.2 </li>
+            <li>Item 2.3 </li>
+        </ol>
+        <li>Item 3 </li>
+        <li>Item 4 </li>
+        <li>Item 5 </li>
+    </ol>
+    </p>
+    <hr><br>
+    <h2>Exercícios propostos</h2>
+    <br>
+    <h3>Listas de bandas</h3>
+
+    <ul type="disc">
+        <li>Heavy Metal</li>
+        <ol>
+            <li>Avenged Sevenfold</li>
+            <ul type="square">
+                <li>A Little Piece Of Heaven</li>
+                <li>Almost Easy</li>
+                <li>Requiem</li>
+            </ul>
+            <li>Bullet For My Valentine</li>
+            <ul>
+                <li>A Place Where You Belong</li>
+                <li>Your Betrayal</li>
+                <li>Prisoner of War</li>
+            </ul>
+        </ol>
+        <li>Rock</li>
+        <ol>
+            <li>Asking Alexandria</li>
+            <ul>
+                <li>A Prophecy</li>
+                <li>Moving On</li>
+                <li>The Final Episode</li>
+            </ul>
+            <li>Black Veil Brides</li>
+            <ul>
+                <li>Knive and Pens</li>
+                <li>In The End</li>
+            </ul>
+        </ol>
+        <li>Hard Rock</li>
+        <ol>
+            <li>Guns N' Roses</li>
+            <ul>
+                <li>Sweet Child O' Mine</li>
+                <li>November Rain</li>
+                <li>Patience</li>
+            </ul>
+            <li>AC/DC</li>
+            <ul>
+                <li>Thunderstruck</li>
+                <li>Back In Black</li>
+            </ul>
+        </ol>
+    </ul>
+    <hr>
+    <h2>Listas de Definições</h2>
+    <p>Todas as listas de Definições esta dentro da tag &lt;dl&lt; <em>(Definition list)</em>. Cada termo é um
+        &lt;dt&lt; <em>(Definition Term)</em> e cada descrição é um &lt;dd&lt; <em>(Definition description).</em>Ex:</p>
+    <hr>
+    <pre>
+        <code>
+            &lt;dl&gt;
+                    &lt;dt&gt;HTML5&lt;dt&gt;
+                    &lt;dd&gt;Linguagem de marcação ultilizado para criar conteúdo de sites.&lt;dd&gt;
+                    &lt;dt&gt;CSS&lt;dt&gt;
+                    &lt;dd&gt;Linguagem de marcação ultilizado para as especificação de estilos em sites.&lt;dd&gt;
+                    &lt;dt&gt;JavaScript&lt;dt&gt;
+                    &lt;dd&gt;Linguagem de programação para criar interatividades em sites.&lt;dd&gt;
+            &lt;dl&gt;
+        </code>
+    </pre>
+    <hr>
+    <p>O resultado vai ser esse:</p><br>
+    <dl>
+        <dt>HTML5</dt>
+        <dd>Linguagem de marcação ultilizado para criar conteúdo de sites.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação ultilizado para as especificação de estilos em sites.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para criar interatividades em sites.</dd>
+    </dl>
+    <hr>
+    <br>
+    <h3>Prova</h3>
+    <p>C, B, A, D, C, D, B, A, A e B. </p>
+</body>
+
+</html>

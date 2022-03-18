@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(255, 198, 198);
+        }
+    </style>
+    <title>Vídeos com HTML5</title>
+</head>
+
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado em meu próprio servidor.</p>
+    <video controls poster="imagens/pexels-eva-elijas-5949836.jpg" width="200" loop>
+        <source src="midia/meu-videoo.mp4" type="video/mp4">
+        <source src="midia/meu-video.mpg" type="video/mpeg">
+        <p>Infelizmente o seu navegador não conseguiu carregar o vídeo.</p>
+    </video>
+    <h1>Vídeos hospedados em sites externos </h1>
+    <p>Este vídeo está hospedado em site externo: YouTube </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/e1JjkZzs_s0" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <p>Video hospedado em site externo: Vimeo</p>
+    <iframe src="https://player.vimeo.com/video/32275653?h=4fe1a29ba6" width="640" height="363" frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/32275653">Depoimento Gustavo Guanabara</a> from <a
+            href="https://vimeo.com/fernandoaugusto">Fernando Augusto</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+</body>
+
+</html>
