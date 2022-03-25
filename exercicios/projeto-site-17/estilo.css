@@ -8,8 +8,6 @@
     font-weight: normal;
 }
 
-/*VOLTAR NA AULA 'TORNANDO UM VÍDEO RESPONSIVO' PARA ANOTAR UMAS 
-'GAMBIARRA DE COMO AJUSTAR UM VÍDEO' PARA ANOTAR EM UMA CADERNO*/
 
 :root {
 
@@ -50,7 +48,7 @@ header {
 }
 
 header > h1 {
-    color: white;
+    color: #ffffff;
     font-family: var(--font-destaque);
     font-weight: normal;
     margin-top: 30px;
@@ -60,7 +58,7 @@ header > h1 {
 
 header > p {
     font-family: var(--font-padrao);
-    color: white;
+    color: #ffffff;
     font-size: 1.2em;
     max-width: 500px;
     padding-right: 10px;
@@ -98,7 +96,7 @@ main {
     margin: auto;
     margin-bottom: 30px;
     padding: 20px;
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0px 0px 10px #00000049;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;

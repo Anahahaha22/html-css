@@ -57,6 +57,7 @@ footer a:hover {
     background-color: #ffffff75;
     color: #010105;
     text-decoration: underline;
+    transition-duration: .5s;
 }
 
 
