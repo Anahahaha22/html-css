@@ -33,7 +33,7 @@ body {
 
 .o-aside, .o-main {
     background-color: #9d9df5;
-    color: rgb(0, 0, 0);
+    color: #000000;
     padding: 15px;
     border-style: hidden;
     border-radius: 10px;
