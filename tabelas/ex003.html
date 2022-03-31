@@ -21,7 +21,8 @@
             border-collapse: collapse;
             text-align: center;
             font-weight: bold;
-            
+            position: relative;
+            margin: 30px;
         }
 
         .num {
@@ -43,7 +44,11 @@
             background-color: #007cc2;
             color: #ffffff;
         }
-        
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #007cc2;
+        }
         tr:nth-child(even) {
             background-color: #2de92d9d;
         }
@@ -62,7 +67,7 @@
           TFOOT
             TR, TD, TH
     -->
-    <table align="center" >
+    <table>
         <caption>O Brasil é dividido em 27 unidades federativas, sendo 26 Estados e um distrito federal.</caption>
         <thead>
             <tr>
@@ -237,10 +242,8 @@
             </tr>
         </tbody>
         <tfoot>
-            <th scope="row">Total de Habitantes </th>
-            <th></th>
-            <th></th>
-            <td class="num">199.805,907</td>
+            <th scope="row" colspan="3">Total de Habitantes </th>
+            <td>199.805,907</td>
         </tfoot>
     </table>
     
