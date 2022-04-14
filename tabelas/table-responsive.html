@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+        border-collapse: collapse;
+        color: #000000;
+        font-weight: bold;
+        width: 900px;
+        margin-top: 30px;
+        margin-left: 30px;
+        text-align: center;
+    }
+    .table-responsive {
+        overflow-y: scroll;
+    }
+    
+    caption {
+        border: 1px solid #CCCCCC;
+    }
+
+    caption > p {
+        font-style: italic;
+    }
+
+    thead th {
+        background-color: #450908;
+        color: #F2F2F2;
+        padding: 5px;
+    }
+
+    thead td {
+        background-color: #333333;
+        color: #F2F2F2;
+    }
+
+    tbody th {
+        background-color: #595959;
+        color: #F2F2F2;
+    }
+
+    .fileira1 {
+        background-color: #CCCCCC;
+        color: #0D0D0D;
+        border: 1px solid #a3a3a3;
+    }
+
+    th {
+        height: 30px;
+        border: 1px solid #CCCCCC;
+    }
+
+    td {
+        height: 30px;
+        border: 1px solid #CCCCCC;
+    }
+
+    tr:nth-child(even) {
+            background-color: #450908;
+            color: #F2F2F2;
+        }
+
+    </style>
+</head>
+<body>
+        <table class="table-responsive">
+            <caption>
+                A5 - Tipo de conexão para acesso á internet no dominicílio.
+                <p>Percentual sobre o total de dominicílio com acesso á internet¹</p>
+            </caption>
+            <thead>
+                <tr>
+                <th rowspan="2" colspan="2">Percentual (%)</th>
+                <th rowspan="2">Modem tradicional (acesso discado linha telefônica)</th>
+                <th colspan="5">Banda Larga²</th>
+                <th rowspan="2">Outros</th>
+                <th rowspan="2">NS/NR³</th>
+                </tr>
+                <tr>
+                <th>TOTAL Banda Larga</th>
+                <th>Modem digital linha telefônica (tecnologia DSL)</th>
+                <th>Modem via cabo</th>
+                <th>Conexão via rádio</th>
+                <th>Conexão via satélite</th>
+                </tr>
+                <tr>
+                    <td colspan="2">Total Brasil</td>
+                    <td>20</td>
+                    <td>66</td>
+                    <td>23</td>
+                    <td>25</td>
+                    <td>14</td>
+                    <td>03</td>
+                    <td>06</td>
+                    <td>10</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="2">Área</th>
+                    <td class="fileira1">Urbana</td>
+                    <td>19</td>
+                    <td>66</td>
+                    <td>24</td>
+                    <td>26</td>
+                    <td>14</td>
+                    <td>03</td>
+                    <td>06</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">Rural</td>
+                    <td>21</td>
+                    <td>55</td>
+                    <td>17</td>
+                    <td>14</td>
+                    <td>20</td>
+                    <td>05</td>
+                    <td>08</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <th rowspan="5">Regiões do país</th>
+                    <td class="fileira1">Sudeste</td>
+                    <td>22</td>
+                    <td>65</td>
+                    <td>21</td>
+                    <td>30</td>
+                    <td>11</td>
+                    <td>03</td>
+                    <td>04</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">Nordeste</td>
+                    <td>19</td>
+                    <td>64</td>
+                    <td>12</td>
+                    <td>32</td>
+                    <td>18</td>
+                    <td>01</td>
+                    <td>10</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">Sul</td>
+                    <td>13</td>
+                    <td>71</td>
+                    <td>34</td>
+                    <td>12</td>
+                    <td>22</td>
+                    <td>03</td>
+                    <td>08</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">Norte</td>
+                    <td>31</td>
+                    <td>49</td>
+                    <td>23</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>05</td>
+                    <td>14</td>
+                    <td>07</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">Centro-Oeste</td>
+                    <td>13</td>
+                    <td>67</td>
+                    <td>34</td>
+                    <td>18</td>
+                    <td>13</td>
+                    <td>02</td>
+                    <td>08</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <th rowspan="6">Renda familiar</th>
+                    <td class="fileira1">Ate R$465,00</td>
+                    <td>16</td>
+                    <td>51</td>
+                    <td>14</td>
+                    <td>20</td>
+                    <td>14</td>
+                    <td>03</td>
+                    <td>12</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">R$466 - R$930</td>
+                    <td>22</td>
+                    <td>61</td>
+                    <td>18</td>
+                    <td>24</td>
+                    <td>15</td>
+                    <td>04</td>
+                    <td>04</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">R$931 - R$1.295</td>
+                    <td>23</td>
+                    <td>62</td>
+                    <td>22</td>
+                    <td>24</td>
+                    <td>13</td>
+                    <td>02</td>
+                    <td>06</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">R$1.396 - R$2.325</td>
+                    <td>23</td>
+                    <td>63</td>
+                    <td>23</td>
+                    <td>22</td>
+                    <td>15</td>
+                    <td>03</td>
+                    <td>06</td>
+                    <td>08</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">R$2.326 - R$4.650</td>
+                    <td>16</td>
+                    <td>75</td>
+                    <td>32</td>
+                    <td>28</td>
+                    <td>11</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>04</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">R$4.651 ou mais</td>
+                    <td>12</td>
+                    <td>78</td>
+                    <td>27</td>
+                    <td>34</td>
+                    <td>16</td>
+                    <td>01</td>
+                    <td>06</td>
+                    <td>05</td>
+                </tr>
+                <tr>
+                    <th rowspan="4">Classe Social⁴</th>
+                    <td class="fileira1">A</td>
+                    <td>11</td>
+                    <td>81</td>
+                    <td>24</td>
+                    <td>41</td>
+                    <td>14</td>
+                    <td>03</td>
+                    <td>09</td>
+                    <td>03</td>
+    
+                </tr>
+                <tr>
+                    <td class="fileira1">B</td>
+                    <td>18</td>
+                    <td>71</td>
+                    <td>28</td>
+                    <td>26</td>
+                    <td>13</td>
+                    <td>03</td>
+                    <td>06</td>
+                    <td>07</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">C</td>
+                    <td>22</td>
+                    <td>61</td>
+                    <td>19</td>
+                    <td>24</td>
+                    <td>15</td>
+                    <td>03</td>
+                    <td>05</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td class="fileira1">DE</td>
+                    <td>26</td>
+                    <td>41</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>15</td>
+                    <td>02</td>
+                    <td>03</td>
+                    <td>29</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>
